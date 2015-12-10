@@ -7,12 +7,12 @@
 ### Help
 
 ```
-docker run -it -v $(pwd):/app ypereirareis/php7cc
+docker run -it --rm -v $(pwd):/app ypereirareis/php7cc
 ```
 
 ### Directory
 
 ```
-docker run -it -v $(pwd):/app ypereirareis/php7cc ./src
+docker run -it --rm -v $(pwd):/app ypereirareis/php7cc ./src
 
 ```
