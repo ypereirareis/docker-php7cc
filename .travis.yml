@@ -6,6 +6,7 @@ services:
   - docker
 
 script:
-  - bash tests.sh
+  - cd 1.0 && bash tests.sh
+  - cd ../2.0 && bash tests.sh
 
 
