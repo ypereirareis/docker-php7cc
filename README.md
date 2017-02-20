@@ -8,11 +8,20 @@
 
 ```
 docker run -it --rm -v $(pwd):/app ypereirareis/php7cc
+docker run -it --rm -v $(pwd):/app ypereirareis/php7cc php7cc -h
 ```
 
 ### Directory
 
 ```
-docker run -it --rm -v $(pwd):/app ypereirareis/php7cc ./src
+docker run -it --rm -v $(pwd):/app ypereirareis/php7cc php7cc ./src
 
 ```
+
+##Other tools
+
+```
+docker run -it --rm -v $(pwd):/app ypereirareis/php7cc bash
+
+```
+
