@@ -7,16 +7,13 @@ ENV PATH "/composer/vendor/bin:$PATH"
 
 WORKDIR /app
 
-RUN apk --no-cache add git curl
-
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-   && chmod +x /usr/local/bin/composer \
-   && echo "date.timezone = Europe/Paris" >> /usr/local/etc/php/conf.d/symfony.ini \
-   && composer global require sstalle/php7cc \
-   && rm /usr/local/bin/composer
-
-RUN apk del git curl -r
+RUN apk --no-cache add git curl \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && chmod +x /usr/local/bin/composer \
+    && echo "date.timezone = Europe/Paris" >> /usr/local/etc/php/conf.d/symfony.ini \
+    && composer global require sstalle/php7cc \
+    && rm /usr/local/bin/composer \
+    && apk del git curl -r
 
 
 COPY ./docker-entrypoint.sh /
