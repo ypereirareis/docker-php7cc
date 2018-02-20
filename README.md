@@ -18,10 +18,9 @@ docker run -it --rm -v $(pwd):/app ypereirareis/php7cc php7cc ./src
 
 ```
 
-##Other tools
+## Other tools
 
 ```
-docker run -it --rm -v $(pwd):/app ypereirareis/php7cc bash
-
+docker run -it --rm -v $(pwd):/app ypereirareis/php7cc sh
 ```
 
