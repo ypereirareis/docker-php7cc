@@ -4,6 +4,14 @@
 
 ## Run
 
+### Build with specific version
+
+```
+git clone https://github.com/ypereirareis/docker-php7cc.git && cd docker-php7cc
+docker build --build-arg PHP7CC_VERSION_ARG=1.2.0 -t local/php7cc:1.2.0 3.1
+docker run -it --rm local/php7cc:1.2.0 php7cc --version
+```
+
 ### Help
 
 ```
